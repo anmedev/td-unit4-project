@@ -17,6 +17,7 @@ const unorderedList = document.querySelector("ul");
 // Selects all of the phrase letters.
 const selectedLetters = unorderedList.children;
 
+// Selects all of the keyboard buttons.
 let keyBoardButtons = document.querySelectorAll(".key");
 
 // Creates the Game class.
@@ -64,9 +65,7 @@ won
       }
     }
     return true;
-
   };
-
 
   /**
 * Displays game over message
@@ -74,17 +73,15 @@ won
 */
   gameOver(gameWon) {
     this.resetGame();
+    overlayDiv.style.display = "block";
     if (gameWon) {
-      overlayDiv.style.display = "block";
       winOrLoseMsg.textContent = "YAY! YOU WON!";
       overlayDiv.classList.remove("lose");
       overlayDiv.classList.add("win");
     } else {
-      overlayDiv.style.display = "block";
       winOrLoseMsg.textContent = "Sorry, better luck next time!";
       overlayDiv.classList.remove("win");
       overlayDiv.classList.add("lose");
-      
     }
   };
 
@@ -115,9 +112,12 @@ won
       if (this.checkForWin()) {
         this.gameOver(true);
       }
-
     }
 
+/**
+* Resets the game.
+* @return none.
+*/
     resetGame() {
       unorderedList.innerHTML = "";
       for (let i = 0; i < keyBoardButtons.length; i++) {
@@ -126,15 +126,12 @@ won
         keyBoardButtons[i].classList.remove("wrong");
         keyBoardButtons[i].classList.remove("chosen");
       }
-      
+
       for (let i = 0; i < gameLives.length; i++) {
         gameLives[i].setAttribute("src", "images/liveHeart.png");
       }
-
       this.missed = 0;
-
       }
-
     };
 
 

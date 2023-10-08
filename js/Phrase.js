@@ -20,8 +20,7 @@ class Phrase {
   addPhraseToDisplay() {
     for (let i = 0; i < this.phrase.length; i++) {
       const listItem = document.createElement("li");
-      this.phrase[i] === " " ?
-        listItem.className = "space" : listItem.className = `hide letter ${this.phrase[i]}`;
+      this.phrase[i] === " " ? listItem.className = "space" : listItem.className = `hide letter ${this.phrase[i]}`;
         listItem.textContent = this.phrase[i];
         ul.appendChild(listItem);
     }
