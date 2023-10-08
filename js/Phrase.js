@@ -4,7 +4,6 @@
 
 // Selects the unordered list.
 let ul = document.querySelector("ul");
-
 // Selects the matching letters.
 const matchedLetter = ul.children;
 
@@ -46,4 +45,3 @@ class Phrase {
     }
   };
 };
-
