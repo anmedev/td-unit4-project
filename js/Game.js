@@ -4,19 +4,14 @@
 
 // Selects screen overlay div.
 const overlayDiv = document.querySelector("#overlay");
-
 // Selects game over message heading.
 const winOrLoseMsg = document.querySelector("#game-over-message");
-
 // Selects all of the game lives.
 let gameLives = document.querySelectorAll("img");
-
 // Selects the unordered list.
 const unorderedList = document.querySelector("ul");
-
 // Selects all of the phrase letters.
 const selectedLetters = unorderedList.children;
-
 // Selects all of the keyboard buttons.
 let keyBoardButtons = document.querySelectorAll(".key");
 
@@ -126,17 +121,9 @@ won
         keyBoardButtons[i].classList.remove("wrong");
         keyBoardButtons[i].classList.remove("chosen");
       }
-
       for (let i = 0; i < gameLives.length; i++) {
         gameLives[i].setAttribute("src", "images/liveHeart.png");
       }
       this.missed = 0;
       }
     };
-
-
-    
-  
-
-    
-
