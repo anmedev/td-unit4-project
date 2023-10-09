@@ -12,7 +12,9 @@ This repository contains my code for the Unit 4 project in the Treehouse Techdeg
 If the user wins the game, a "YAY! YOU WON!" message will display on the screen with the option for the user to restart the game if they would like. If the user loses the game, a "Sorry, better luck next time!" message will display on the screen with the option for the user to restart the game if they would like.
 
 ## Known Bugs
-The "YAY! YOU WON!" message currently displays when a user wins or loses the game. I am in the process of fixing this so the correct message displays when the game is won or lost.
+10/8/23: The proper message now displays when a user wins or loses the game. There are no known bugs at this time.
+
+10/8/23: The "YAY! YOU WON!" message currently displays when a user wins or loses the game. I am in the process of fixing this so the correct message displays when the game is won or lost.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/#)
