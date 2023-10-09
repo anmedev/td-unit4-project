@@ -93,19 +93,22 @@ won
       }
     };
 
+/**
+* Handles onscreen keyboard button clicks
+* @param (HTMLButtonElement) button - The clicked button element
+*/
     handleInteraction(button) {
       button.disabled = true;
       let letter = button.textContent;
       if (this.activePhrase.checkLetter(letter)) {
         button.classList.add("chosen");
         this.activePhrase.showMatchedLetter(letter);
+        if (this.checkForWin()) {
+          this.gameOver(true);
+        }
       } else {
         button.classList.add("wrong");
         this.removeLife();
-      }
-
-      if (this.checkForWin()) {
-        this.gameOver(true);
       }
     }
 
